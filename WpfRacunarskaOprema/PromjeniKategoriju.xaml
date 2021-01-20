@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfRacunarskaOprema.PromjeniKategoriju"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfRacunarskaOprema"
+        mc:Ignorable="d"
+        Title="PromjeniKategoriju" Height="400" Width="500">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="111,26,0,0" TextWrapping="Wrap" Text="Promjena kategoriju" VerticalAlignment="Top" Height="42" Width="282" FontWeight="Bold" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,87,0,0" TextWrapping="Wrap" Text="Naziv" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,135,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxNaziv" HorizontalAlignment="Left" Height="23" Margin="128,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <TextBox Name="TextBoxOpis" HorizontalAlignment="Left" Height="144" Margin="128,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <Button Name="ButtonPromjeni" Content="Promjeni" HorizontalAlignment="Left" Margin="128,307,0,0" VerticalAlignment="Top" Width="94"  Height="30" Click="ButtonPromjeni_Click"/>
+        <Button Name="ButtonOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="317,307,0,0" VerticalAlignment="Top" Width="97" Click="ButtonOtkazi_Click" Height="30"/>
+
+    </Grid>
+</Window>
