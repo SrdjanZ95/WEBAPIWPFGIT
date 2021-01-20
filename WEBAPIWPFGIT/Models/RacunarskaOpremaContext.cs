@@ -12,7 +12,9 @@ namespace WEBAPIWPFGIT.Models
         public RacunarskaOpremaContext(DbContextOptions<RacunarskaOpremaContext> opcije) : base(opcije)
         {
         }
-
+        /// <summary>
+        /// /////
+        /// </summary>
         public DbSet<Kategorija> Kategorije { get; set; }
         public DbSet<Proizvod> Proizvodi { get; set; }
     }
