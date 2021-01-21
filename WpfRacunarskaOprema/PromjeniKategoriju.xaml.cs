@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCLRacunari;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,9 @@ namespace WpfRacunarskaOprema
 
         private void ButtonPromjeni_Click(object sender, RoutedEventArgs e)
         {
-         
+            Kategorija k = mw.ComboBox1.SelectedItem as Kategorija;
+            k.NazivKategorije = TextBoxNaziv.Text;
+            k.OpisKategorije = TextBoxOpis.Text;
 
             string url = "/api/kategorija/";
         }
