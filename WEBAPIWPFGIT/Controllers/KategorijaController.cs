@@ -21,9 +21,9 @@ namespace WEBAPIWPFGIT.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Kategorija> VratiKategorije()
+        public  IEnumerable<Kategorija> VratiKategorije()
         {
-            return db.Kategorije;
+            return  db.Kategorije;
         }
 
         [HttpGet]
@@ -61,13 +61,13 @@ namespace WEBAPIWPFGIT.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public int ObrisiKategoriju(int id)
+        public async Task<int> ObrisiKategoriju(int id)
         {
             try
             {
                 Kategorija kategorija = db.Kategorije.Find(id);
                 db.Kategorije.Remove(kategorija);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return 0;
             }
             catch (Exception)
@@ -80,12 +80,12 @@ namespace WEBAPIWPFGIT.Controllers
 
         [HttpPost]
         [Route("{id}")]
-        public int PromjeniKategoriju(Kategorija k)
+        public async Task<int> PromjeniKategoriju(Kategorija k)
         {
             try
             {
                 db.Entry(k).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 return 0;
             }
             catch (Exception)
