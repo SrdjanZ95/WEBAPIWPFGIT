@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <DataGrid  Name="DataGrid1" HorizontalAlignment="Left" Height="211" Margin="9,72,0,0" VerticalAlignment="Top" Width="597"/>
-        <ComboBox Name="ComboBox1" HorizontalAlignment="Left" Margin="159,15,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="ComboBox1_SelectionChanged"/>
+        <ComboBox Name="ComboBox1" HorizontalAlignment="Left" Margin="159,15,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="ComboBox1_SelectionChanged" />
         <TextBlock HorizontalAlignment="Left" Margin="17,15,0,0" TextWrapping="Wrap" Text="KATEGORIJE" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Perpetua Titling MT" Width="186" FontSize="18"/>
         <TextBox Name="TextBoxPretraga" HorizontalAlignment="Left" Height="23" Margin="486,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxPretraga_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="350,15,0,0" TextWrapping="Wrap" Text="Pretrazi proizvode po Id" VerticalAlignment="Top"/>
