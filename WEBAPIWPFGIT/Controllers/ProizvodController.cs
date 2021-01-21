@@ -21,14 +21,14 @@ namespace WEBAPIWPFGIT.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Proizvod> VratiProizvode()
+        public async Task<IEnumerable<Proizvod>> VratiProizvode()
         {
             return db.Proizvodi;
         }
 
         [HttpGet]
         [Route("kategorija/{id}")]
-        public IEnumerable<Proizvod> VratiProizvode(int id = 0)
+        public async Task<IEnumerable<Proizvod>> VratiProizvode(int id = 0)
         {
             IEnumerable<Proizvod> listaProizvoda = db.Proizvodi;
 
