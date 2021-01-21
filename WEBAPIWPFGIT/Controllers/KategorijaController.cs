@@ -21,14 +21,14 @@ namespace WEBAPIWPFGIT.Controllers
         }
 
         [HttpGet]
-        public  IEnumerable<Kategorija> VratiKategorije()
+        public async Task<IEnumerable<Kategorija>> VratiKategorije()
         {
-            return  db.Kategorije;
+            return   db.Kategorije;
         }
 
         [HttpGet]
         [Route("{id}")]
-        public Kategorija VratiKategoriju(int id)
+        public async  Task<Kategorija> VratiKategoriju(int id)
         {
             Kategorija k1 = db.Kategorije.Find(id);
 
