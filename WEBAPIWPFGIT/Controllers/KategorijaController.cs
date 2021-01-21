@@ -78,8 +78,8 @@ namespace WEBAPIWPFGIT.Controllers
 
         }
 
-        [HttpPost]
-        [Route("{id}")]
+        [HttpPut]
+        
         public async Task<int> PromjeniKategoriju(Kategorija k)
         {
             try

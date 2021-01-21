@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfRacunarskaOprema"
         mc:Ignorable="d"
-        Title="PromjeniKategoriju" Height="400" Width="500">
+        Title="PromjeniKategoriju" Height="400" Width="500" Loaded="Window_Loaded">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="111,7,0,0" TextWrapping="Wrap" Text="Promjena kategoriju" VerticalAlignment="Top" Height="42" Width="282" FontWeight="Bold" FontSize="24"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,102,0,0" TextWrapping="Wrap" Text="Naziv" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="51,135,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top"/>
-        <TextBox Name="TextBoxNaziv" HorizontalAlignment="Left" Height="23" Margin="128,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
-        <TextBox Name="TextBoxOpis" HorizontalAlignment="Left" Height="144" Margin="128,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
-        <Button Name="ButtonPromjeni" Content="Promjeni" HorizontalAlignment="Left" Margin="128,307,0,0" VerticalAlignment="Top" Width="94"  Height="30" Click="ButtonPromjeni_Click"/>
-        <Button Name="ButtonOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="317,307,0,0" VerticalAlignment="Top" Width="97" Click="ButtonOtkazi_Click" Height="30"/>
-        <TextBlock HorizontalAlignment="Left" Margin="51,68,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top"/>
-        <TextBox Name="TextBoxID" HorizontalAlignment="Left" Height="23" Margin="128,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <TextBlock HorizontalAlignment="Left" Margin="111,7,0,0" TextWrapping="Wrap" Text="Promjena kategorije" VerticalAlignment="Top" Height="42" Width="282" FontWeight="Bold" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,126,0,0" TextWrapping="Wrap" Text="Naziv" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,159,0,0" TextWrapping="Wrap" Text="Opis" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxNaziv" HorizontalAlignment="Left" Height="23" Margin="128,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <TextBox Name="TextBoxOpis" HorizontalAlignment="Left" Height="144" Margin="128,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <Button Name="ButtonPromjeni" Content="Promjeni" HorizontalAlignment="Left" Margin="128,331,0,0" VerticalAlignment="Top" Width="94"  Height="30" Click="ButtonPromjeni_Click"/>
+        <Button Name="ButtonOtkazi" Content="Otkazi" HorizontalAlignment="Left" Margin="317,331,0,0" VerticalAlignment="Top" Width="97" Click="ButtonOtkazi_Click" Height="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,92,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxID" HorizontalAlignment="Left" Height="23" Margin="128,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="286"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,58,0,0" TextWrapping="Wrap" Text="Izaberi kategoriju" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBoxPromjenaKategorije" HorizontalAlignment="Left" Margin="128,58,0,0" VerticalAlignment="Top" Width="286" SelectionChanged="ComboBoxPromjenaKategorije_SelectionChanged"/>
 
     </Grid>
 </Window>

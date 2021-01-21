@@ -30,7 +30,7 @@ namespace WpfRacunarskaOprema
             klijent.BaseAddress = new Uri("http://localhost:52850/");
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private  void Window_Loaded(object sender, RoutedEventArgs e)
         {
             PrikaziKategorije();
             ComboBox1.SelectedIndex = 0;
@@ -208,34 +208,15 @@ namespace WpfRacunarskaOprema
 
             PromjeniKategoriju pk = new PromjeniKategoriju();
 
-            if (ComboBox1.SelectedIndex > 0)
-            {
-                pk.Show();
+            pk.Show();
 
-                Kategorija k = ComboBox1.SelectedItem as Kategorija;
-                pk.TextBoxID.Text = k.KategorijaId.ToString();
-                pk.TextBoxNaziv.Text = k.NazivKategorije;
-                pk.TextBoxOpis.Text = k.OpisKategorije;
-            }
-            else
-            {
-                MessageBox.Show("Izaberite kategoriju za promjenu!");
-            }
+                
             
         }
 
         private void ComboBox1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            PromjeniKategoriju pk = new PromjeniKategoriju();
-
-            if (ComboBox1.SelectedIndex > 0)
-            {
-                Kategorija k = ComboBox1.SelectedItem as Kategorija;
-                pk.TextBoxID.Text = k.KategorijaId.ToString();
-                pk.TextBoxNaziv.Text = k.NazivKategorije;
-                pk.TextBoxOpis.Text = k.OpisKategorije;
-
-            }
+           
         }
     }
 }
