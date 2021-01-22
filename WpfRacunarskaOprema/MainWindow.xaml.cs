@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using log4net;
+using Newtonsoft.Json;
 using PCLRacunari;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace WpfRacunarskaOprema
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         private HttpClient klijent = new HttpClient();
         public MainWindow()
         {
@@ -36,7 +39,7 @@ namespace WpfRacunarskaOprema
             ComboBox1.SelectedIndex = 0;
             PrikaziProizvode();
         }
-
+        
 
         //PRIKAZI SVE KATEGORIJE U Combo Box-u
         public async void PrikaziKategorije()
@@ -48,7 +51,7 @@ namespace WpfRacunarskaOprema
             {
                 string jsonKategorija = await klijent.GetStringAsync(url);
                 listaKategorija = JsonConvert.DeserializeObject<List<Kategorija>>(jsonKategorija);
-                // DataGrid1.ItemsSource = listaKategorija;
+                 DataGrid1.ItemsSource = listaKategorija;
 
                 ComboBox1.Items.Add(new Kategorija { KategorijaId = 0, NazivKategorije = "Sve kategorije" });
 
@@ -59,7 +62,8 @@ namespace WpfRacunarskaOprema
             }
             catch (Exception xcp)
             {
-                MessageBox.Show(xcp.Message);
+
+               MessageBox.Show(xcp.Message);
             }
          
         }
