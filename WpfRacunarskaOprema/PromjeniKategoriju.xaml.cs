@@ -36,6 +36,9 @@ namespace WpfRacunarskaOprema
         {
             PrikaziKategorije();
         }
+
+
+        //PRIKAZ KATEGORIJA U COMBO BOX-uj
         public async void PrikaziKategorije()
         {
             string url = "/api/kategorija";
@@ -65,6 +68,8 @@ namespace WpfRacunarskaOprema
             this.Close();
         }
 
+
+        //PROMJENA KATEGORIJE 
         private void ButtonPromjeni_Click(object sender, RoutedEventArgs e)
         {
             Kategorija k = ComboBoxPromjenaKategorije.SelectedItem as Kategorija;

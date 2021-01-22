@@ -25,11 +25,13 @@ namespace WpfRacunarskaOprema
     public partial class MainWindow : Window
     {
         
-
+        //HTTP CLIENT
         private HttpClient klijent = new HttpClient();
         public MainWindow()
         {
             InitializeComponent();
+
+            //BAZNA ADRESA
             klijent.BaseAddress = new Uri("http://localhost:52850/");
         }
 
@@ -129,6 +131,7 @@ namespace WpfRacunarskaOprema
 
 
        
+        //Pretraga po ID kategorije za ispis proizvoda u data gridu
         private async void TextBoxPretraga_TextChanged(object sender, TextChangedEventArgs e)
         {
             //Proizvod k = ComboBox1.SelectedItem as Kategorija;
@@ -163,6 +166,8 @@ namespace WpfRacunarskaOprema
             w1.Show();
         }
 
+
+        //BRISANJE KATEGORIJE 
         private void ButtonObrisi_Click(object sender, RoutedEventArgs e)
         {
             if (ComboBox1.SelectedIndex < 1)
