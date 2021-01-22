@@ -121,9 +121,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PCLRacunari\PCLRacunari.csproj">
+    <ProjectReference Include="..\PCLRacunari\Models.csproj">
       <Project>{fea375fd-ab50-4dc6-b04e-d95a5e325c1e}</Project>
-      <Name>PCLRacunari</Name>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

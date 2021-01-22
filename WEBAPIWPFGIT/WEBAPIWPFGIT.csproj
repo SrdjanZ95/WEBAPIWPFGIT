@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PCLRacunari\PCLRacunari.csproj" />
+    <ProjectReference Include="..\PCLRacunari\Models.csproj" />
   </ItemGroup>
 
 </Project>
